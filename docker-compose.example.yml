@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+    simple-cron-scheduler:
+        image: dantebarba/simple-cron-scheduler:latest
+        container_name: simple-cron-scheduler
+        volumes:
+            - path to script:/app/script.sh
+            - path to logs:/var/log/crond.log
+            - path to script log:/var/log/script.log
+        environment:
+            CRON: '0 * * * *'
+            ARGS: '-v'
+            LOG: '/var/log/script.log'
+            SCRIPT: '/app/script.sh' # the script location inside the container
+
+        
