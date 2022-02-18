@@ -19,6 +19,6 @@ ENV LOG "/var/log/script.log"
 # define the script to run (full path)
 ENV SCRIPT "/app/script.sh"
 # define the arguments for the script
-ENV ARGS "arg1 arg2"
+ENV ARGS ""
 
 ENTRYPOINT ["/bin/sh", "/usr/bin/cron.sh"]
